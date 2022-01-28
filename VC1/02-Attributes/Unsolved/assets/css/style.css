@@ -17,3 +17,8 @@
 #portfolio {
     background-color: darkorange;
 }
+
+/* Added to make all my links the same color to match mock-up*/
+a {
+    color:blue;
+}
