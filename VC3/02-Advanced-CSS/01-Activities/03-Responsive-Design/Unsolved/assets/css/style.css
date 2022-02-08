@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+header {
+  padding: 40px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+/* 
+What happens when we set the display property to flex? 
+display: none = Hides the nav bar in the html
+display: contents = Seems to take away the color
+display: grid = set element in column style
+display: inline-flex = Makes the height to fit 100% of the screen with other elements below, does not fit 100% width to the right
+display: flex = Makes the height to fit 100% of the screen with elements below, Makes the width to fit 100% of the screen elements to the right
+*/
+nav {
+  display: flex;
+  background-color: #d8a47f;
+}
+
+nav a {
+  color: #13293d;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* 
+What is the flex-wrap property? 
+flex-wrap will take elements that are out of view and position them in a new row to fot  vertically
+*/
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+aside {
+  flex: 1;
+  background-color: #b9c6ae;
+  padding: 80px;
+  text-align: center;
+}
+
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+/* 
+What does the justify-content property do? 
+justify content will take give elements and position them based on value: right, left, center, space evenly  
+*/
+.products {
+  flex: 4;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* 
+What is the flex property a shorthand property for?
+What is it doing here? 
+TODO: sets how a flex item will grow or shrink to fit the space available in its flex container. it is::after
+1. a <number> for <flex-grow>.
+2. a <number> for <flex-shrink>.
+3. a valid value for width for <flex-basis>.
+*/
+.card {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 10px;
+  flex: 0 0 400px;
+}
+
+.card header {
+  padding: 20px;
+}
+
+.card p {
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+}
+
+/* 
+What does the flex-direction property define?
+What is it doing here? 
+The flex-direction CSS property sets how flex items are placed in the flex container defining the main axis and the direction (normal or reversed)
+It is stacking the element vertically
+*/
+@media screen and (max-width: 768px) {
+  main,
+  nav {
+    flex-direction: column;
+  }
+}
